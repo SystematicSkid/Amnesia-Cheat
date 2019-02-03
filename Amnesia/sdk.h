@@ -20,13 +20,14 @@
 #include <algorithm>
 #include <sstream>
 // game
-#include "vector.h"
-#include "characterbody.h"
-#include "enemy.h"
-#include "maphandler.h"
-#include "player.h"
-#include "game.h"
+#include "sdk\vector.h"
+#include "sdk\characterbody.h"
+#include "sdk\enemy.h"
+#include "sdk\maphandler.h"
+#include "sdk\player.h"
+#include "sdk\game.h"
 
 // cheat
 #include "interfaces.h"
-
+#include "game.h"
+#include "hooks.h"

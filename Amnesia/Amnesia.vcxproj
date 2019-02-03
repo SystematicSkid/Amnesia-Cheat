@@ -68,7 +68,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\PC\Documents\Visual Studio 2015\Projects\Amnesia\Capstone\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\PC\Documents\Visual Studio 2015\Projects\Amnesia\Capstone\msvc\x86\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -111,16 +114,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="characterbody.h" />
-    <ClInclude Include="enemy.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="hooks.h" />
     <ClInclude Include="interfaces.h" />
-    <ClInclude Include="maphandler.h" />
-    <ClInclude Include="player.h" />
     <ClInclude Include="sdk.h" />
-    <ClInclude Include="vector.h" />
+    <ClInclude Include="sdk\characterbody.h" />
+    <ClInclude Include="sdk\enemy.h" />
+    <ClInclude Include="sdk\game.h" />
+    <ClInclude Include="sdk\maphandler.h" />
+    <ClInclude Include="sdk\player.h" />
+    <ClInclude Include="sdk\vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="hooks.cpp" />
     <ClCompile Include="interfaces.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
